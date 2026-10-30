@@ -51,7 +51,7 @@
 /* Sfondo con immagine sfocata per il terzo blocco */
 .blocco-wrapper:nth-child(3) .blocco::after {
   content: "";
-  background-image: url('../song/music.png');
+  background-image: url('https://luis-git-07.github.io/Gift/song/music.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
