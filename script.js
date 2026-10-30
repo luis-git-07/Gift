@@ -176,11 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Applichiamo l'opacità all'intero blocco (sfondo + elementi interni insieme)
-      const figliBlocco = blocco.children;
-      Array.from(figliBlocco).forEach((c) => {
-        c.style.opacity = opacita.toFixed(2);
-      });
+      // Applichiamo l'opacità direttamente al blocco intero 
+      // (invece che ai singoli figli), preservando il blur dello sfondo
+      blocco.style.opacity = opacita.toFixed(2);
 
       // Gestisce la visibilità per evitare interazioni fantasma quando è trasparente
       if (opacita <= 0.05) {

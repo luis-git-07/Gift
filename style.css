@@ -5,3 +5,131 @@
 @import url(css/lettera.css);
 @import url(css/song.css);
 @import url(css/block.css);
+
+/* ==========================================
+   ADATTAMENTI RESPONSIVE PER SMARTPHONE
+   ========================================== */
+@media screen and (max-width: 768px) {
+  
+  /* Layout e Tipografia Generali */
+  .hero-section h1 {
+    font-size: 8.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .future-sections {
+    padding: 40px 15px;
+  }
+
+  /* Blocco Stack e Sfondi */
+  .blocco-wrapper:nth-child(1) .blocco,
+  .blocco-wrapper:nth-child(2) .blocco,
+  .blocco-wrapper:nth-child(3) .blocco {
+    padding: 20px 0;
+  }
+
+  /* Rimuove background-attachment: fixed che causa problemi su iOS/Android */
+  .blocco-wrapper:nth-child(3) .blocco::after {
+    background-attachment: scroll;
+    filter: blur(2px);
+  }
+
+  /* Lock Screen / PIN Box */
+  .lock-box {
+    width: 90%;
+    max-width: 360px;
+    padding: 30px 20px;
+  }
+
+  .lock-box h2 {
+    font-size: 22px;
+  }
+
+  .lock-box input {
+    font-size: 18px;
+    letter-spacing: 5px;
+  }
+
+  /* Lettera di Natale */
+  .lettera-natale {
+    width: 92%;
+    margin: 20px auto;
+    padding: 30px 20px;
+  }
+
+  .lettera-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .lettera-natale h2 {
+    font-size: 24px;
+  }
+
+  .contenuto-lettera p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .firma span {
+    font-size: 36px;
+  }
+
+  /* Player Musicale e Galleria (Disposizione in verticale) */
+  .container-due-colonne {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .player-disco-sezione.glass-card,
+  .galleria-foto-sezione.glass-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .player-disco-sezione .player-container {
+    width: 180px;
+    height: 160px;
+  }
+
+  .player-disco-sezione .copertina-album {
+    width: 150px;
+    height: 150px;
+  }
+
+  .player-disco-sezione .disco-vinile {
+    width: 140px;
+    height: 140px;
+  }
+
+  .player-disco-sezione .etichetta-centro {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Animazione rotazione vinile ridotta per schermi stretti */
+  @keyframes esciERuota {
+    0% {
+      transform: translateX(0px) rotate(0deg);
+    }
+    100% {
+      transform: translateX(25px) rotate(360deg);
+    }
+  }
+
+  @keyframes ruotaContinuamente {
+    0% {
+      transform: translateX(25px) rotate(0deg);
+    }
+    100% {
+      transform: translateX(25px) rotate(360deg);
+    }
+  }
+}
