@@ -1,0 +1,105 @@
+/* --- SCHERMATA DI LOGIN / PIN AL CENTRO (Stile Apple Moderno) --- */
+#lock-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(5, 1, 1, 0.4);
+  backdrop-filter: blur(25px); /* Sfondo molto sfocato stile iOS */
+  -webkit-backdrop-filter: blur(25px);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+/* Box di login ultra-moderno */
+.lock-box {
+  width: 400px;
+  padding: 45px 35px;
+  text-align: center;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.lock-box h2 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.lock-box p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* Input del PIN minimalista e di classe */
+.lock-box input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 8px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.lock-box input::placeholder {
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.lock-box input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+}
+
+/* Pulsante di accesso in stile Apple */
+.lock-box button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #ff3b30; /* Rosso Natale brillante stile Apple */
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 58, 48, 0.088);
+  transition: all 0.25s ease;
+}
+
+.lock-box button:hover {
+  background: #ff453a;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(255, 59, 48, 0.5);
+}
+
+.lock-box button:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.error-msg {
+  color: #ffb3b3;
+  font-size: 13px;
+  margin-top: 14px;
+  display: none;
+  font-weight: 500;
+}

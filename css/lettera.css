@@ -1,0 +1,111 @@
+/* Importa font moderni ed eleganti da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Alex+Brush&display=swap');
+
+.lettera-natale {
+  position: relative;
+  width: 90%;
+  max-width: 780px; /* Più larga e generosa */
+  margin: 40px auto;
+  padding: 60px 65px; /* Spazi interni molto ampi e ordinati */
+  
+  /* Effetto vetro opaco di altissima qualità */
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  
+  /* Ombra profonda ma soft per staccarla dal gradiente di sfondo */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25),
+              0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+              
+  font-family: 'Outfit', sans-serif;
+  color: #1f1f1f;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Pulizia degli elementi non necessari */
+.lettera-natale::before, .timbro {
+  display: none;
+}
+
+/* Intestazione ordinata in stile editoriale con Flexbox */
+.lettera-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 25px;
+  margin-bottom: 35px;
+}
+
+.lettera-natale h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  color: #111;
+  margin: 5px 0 8px 0;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.lettera-natale .data {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Francobollo minimal integrato nell'intestazione */
+.affrancatura {
+  position: static;
+}
+
+.francobollo {
+  width: 100px;
+  height: 48px;
+  background: #c0392b;
+  color: #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none;
+  outline: none;
+}
+
+/* Corpo del testo spazioso e leggibile */
+.contenuto-lettera p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 24px;
+  font-weight: 300; /* Stile leggero e moderno */
+}
+
+/* Firma pulita ed elegante separata da una linea sottile */
+.firma {
+  margin-top: 50px;
+  text-align: right;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 25px;
+}
+
+.firma span {
+  font-family: 'Alex Brush', cursive;
+  font-size: 44px;
+  color: #c0392b;
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+}
