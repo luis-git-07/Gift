@@ -3,7 +3,7 @@
 // ==========================================
 // Metti a TRUE per attivare la richiesta del PIN
 // Metti a FALSE per disattivarla e mostrare subito il sito
-const ATTIVA_PROTEZIONE_PIN = true;
+const ATTIVA_PROTEZIONE_PIN = false;
 const correctPin = "23032023";
 
 const lockScreen = document.getElementById('lock-screen');

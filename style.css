@@ -5,12 +5,26 @@
 @import url(css/lettera.css);
 @import url(css/song.css);
 @import url(css/block.css);
+@import url(css/game.css);
 
 /* ==========================================
    ADATTAMENTI RESPONSIVE PER SMARTPHONE
    ========================================== */
 @media screen and (max-width: 768px) {
-  
+  #bg-video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Forza il video a coprire lo spazio senza distorcersi */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Specifica il punto di ancoraggio (opzionale, es. mantiene il centro del video) */
+    object-position: center center;
+  }
+
   /* Layout e Tipografia Generali */
   .hero-section h1 {
     font-size: 8.5rem;
@@ -119,6 +133,7 @@
     0% {
       transform: translateX(0px) rotate(0deg);
     }
+
     100% {
       transform: translateX(25px) rotate(360deg);
     }
@@ -128,6 +143,7 @@
     0% {
       transform: translateX(25px) rotate(0deg);
     }
+
     100% {
       transform: translateX(25px) rotate(360deg);
     }

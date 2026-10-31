@@ -32,17 +32,18 @@
 .blocco-wrapper:nth-child(2) .blocco {
   z-index: 2;
   padding: 40px 0;
-  background-image: radial-gradient(#9f968e7b 1px, transparent 0), linear-gradient(180deg, transparent, rgba(223, 35, 35, 0.30) 22%, rgba(223, 35, 35, 0.30) 88%, #00000043);
+  background-image: radial-gradient(#9f968e7b 1px, transparent 0), linear-gradient(180deg, transparent, rgba(223, 35, 35, 0.30) 22%, rgba(223, 35, 35, 0.30) 88%, transparent);
   background-size: 24px 24px, auto;
   background-repeat: repeat, no-repeat;
 }
 
 /* Livello 3: Player Musicale (con ombra uniforme tutto intorno) */
 .blocco-wrapper:nth-child(3) .blocco {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00000043;
+  background-image: linear-gradient(180deg,transparent, transparent 20%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.8) 20%, transparent);
   z-index: 3;
   position: relative;
   padding: 40px 0;
@@ -52,6 +53,36 @@
 .blocco-wrapper:nth-child(3) .blocco::after {
   content: "";
   background-image: url('https://luis-git-07.github.io/Gift/song/music.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.4;
+  filter: blur(6px);
+  mask-image: linear-gradient(180deg, transparent, rgba(165, 42, 42, 1) 30%, brown 88%, #0000009d);
+}
+
+.blocco-wrapper:nth-child(4) .blocco {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(180deg,transparent, transparent 20%, rgba(28, 25, 49, 0.8) 40%, rgba(28, 25, 49, 0.8) 20%, transparent);
+  z-index: 4;
+  position: relative;
+  padding: 40px 0;
+}
+
+/* Sfondo con immagine sfocata per il terzo blocco */
+.blocco-wrapper:nth-child(4) .blocco::after {
+  content: "";
+  background-image: url('https://luis-git-07.github.io/Gift/img/IMG-20261031-WA0054.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
